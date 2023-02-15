@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./css/style.css"
 
 const Tempapp=()=>{
-    const[city, setCity]=useState("Chandrapur");
+    const[city, setCity]=useState(null);
     const[search,setSearch] = useState("Mumbai");
 
     useEffect(()=>{
@@ -18,6 +18,10 @@ const Tempapp=()=>{
 
         fetchApi();
     },[search])
+
+    // function clickToSerach(){
+        
+    // }
     return(
         <>
         <div className="box">
@@ -27,6 +31,7 @@ const Tempapp=()=>{
             className="inputField"
             onChange={(event)=>{setSearch(event.target.value)}}
             />
+            {/* <button onClick={clickToSerach}>Search</button> */}
         </div>
 
         {
